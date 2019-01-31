@@ -1,0 +1,31 @@
+<div>
+  <nav class="navbar navbar-expand-sm fixed-top navbar-light">
+    <a [routerLink]="['']">
+      <div class="navbar-brand">
+        <b>ZACH <br /> EGGLETON</b>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto navbar-right">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/about']">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">PROJECTS</a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item" *ngFor="let p of projects">
+              <a href="javascript: void(0)">{{p.name}}</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">EXPERIENCE</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

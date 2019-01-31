@@ -1,0 +1,16 @@
+.container-styles {
+    position: relative;
+    top: 100px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.list-group-item {
+    background: rgba(0,0,0,0.8);
+    color: white;
+    border: 1px solid white;
+}
+
+.page-header {
+    color: white;
+    text-align: center;
+}

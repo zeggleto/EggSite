@@ -1,0 +1,73 @@
+[
+    {
+        "name": "Digital Travel Map",
+        "shortDesc": "Mark your travels on this map and save them to your browser!",
+        "longDesc": [
+            "This small program lets you place different markers on the map commemorating ",
+            "your travels across the U.S. Once you've placed your locations on the map, you don't have ",
+            "to worry about losing your data; it automatically saves your markers inside your web browser! ",
+            "This program also allows you to download any markers you placed on the map into a .txt file and ",
+            "import it into a different browser, so you're not stuck with just one browser, or you realize ",
+            "the one you're using isn't compatible with saving browser data"
+        ],
+        "technologies": "HTML5, CSS3, JavaScript, Google Maps API, IndexedDB, JSON",
+        "images": [
+            "ustravelmap.PNG",
+            "ustravelmap1.PNG",
+            "ustravelmap2.PNG"
+        ],
+        "gitLink": "https://github.com/zeggleto/TravelMap",
+        "projLink": "Projects/Travel Map/pMap.html"
+    },
+    {
+        "name": "AngularJS Website",
+        "shortDesc": "Yes, it's black and white. My mind couldn't build cool color formations, so I just gave up",
+        "longDesc": [
+            "This is my own portfolio of projects and work I have done since college. I built it from ",
+            "scratch so I could understand web hosting a lot better and use the front-end skills I've been saving ",
+            "for a while. I want it to work on both mobile and desktops, so I used Bootstrap in it, and I wanted to ",
+            "keep it to just one page, so I used AngularJS."
+        ],
+        "technologies": "HTML5, CSS3, JavaScript, Bootstrap, AngularJS, PHP",
+        "images": [
+            "thiswebsite.PNG",
+            "thiswebsite2.PNG"
+        ],
+        "gitLink": "https://github.com/zeggleto/zacheggleton.github.io",
+        "projLink": "http://zacheggleton.com"
+    },
+    {
+        "name": "Weather Comparer",
+        "shortDesc": "Too hot or cold where you're at? Other places probably have it worse than you!",
+        "longDesc": [
+            "A simple Python Kivy GUI that gets info from a Flask Server. The server grabs weather data from ",
+            "OpenWeatherAPI for a select number of cities from around the U.S., and compares it to your local weather. ",
+            "The GUI itself grabs the info from the Flask Application and displays to the user. The server updates it's ",
+            "weather every 10 minutes, while the GUI updates every 11 minutes. User can switch between hot and cold ",
+            "places as well. The application was designed to be used with the Raspberry Pi, but can work on most ",
+            "desktop environments"
+        ],
+        "technologies": "Python3, Flask, Kivy, OpenWeatherAPI",
+        "images": [
+            "weathercompare.PNG"
+        ],
+        "gitLink": "https://github.com/zeggleto/WeatherServer"
+    },
+    {
+        "name": "Bomb Finder",
+        "shortDesc": "This is just a knockoff of Minesweeper (honestly more of a direct ripoff).",
+        "longDesc": [
+            "This is a simple C# Windows Form application that plays the game Bomb Finder (may or may not be ",
+            "similar to something else). Just run the game from the same folder as the corresponding .dll file it ",
+            "came with."
+        ],
+        "technologies": "C#, .NET Windows Forms App",
+        "images": [
+            "photos/bombfinder.PNG",
+            "photos/bombfinder1.PNG",
+            "photos/bombfinder2.PNG"
+        ],
+        "gitLink": "https://github.com/zeggleto/BombFinder",
+        "projLink": "Projects/BombFinder.zip"
+    }
+]
