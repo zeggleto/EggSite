@@ -1,13 +1,8 @@
 <div class="container-fluid container-styles">
-  <h1 class="page-header"><b>PROJECTS</b></h1>
+  <p class="page-header"><b>PERSONAL PROJECTS</b></p>
   <ul class="list-group">
-    <li class="list-group-item">
-      <div class="project-brief">
-        <p>No</p>
-        <p>Yes</p>
-        <p>Don't Know</p>
-      </div>
-      <img class="img-rounded sample-image">
+    <li class="list-group-item" *ngFor="let p of projects">
+      {{p.name}}
     </li>
   </ul>
 </div>

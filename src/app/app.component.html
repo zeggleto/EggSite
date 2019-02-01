@@ -14,12 +14,14 @@
           <a class="nav-link" [routerLink]="['/about']">ABOUT</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">PROJECTS</a>
-          <ul class="dropdown-menu">
-            <li class="dropdown-item" *ngFor="let p of projects">
-              <a href="javascript: void(0)">{{p.name}}</a>
-            </li>
-          </ul>
+          <div class="dropdown">
+            <a class="nav-link dropdown-toggle" [routerLink]="['/projects']">PROJECTS</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item" *ngFor="let p of projects">
+                <a href="javascript: void(0)">{{p.name}}</a>
+              </li>
+            </ul>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="">EXPERIENCE</a>
@@ -27,5 +29,6 @@
       </ul>
     </div>
   </nav>
+  
   <router-outlet></router-outlet>
 </div>

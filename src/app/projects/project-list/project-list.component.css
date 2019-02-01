@@ -13,4 +13,7 @@
 .page-header {
     color: white;
     text-align: center;
+    background: rgba(0,0,0,0.8);
+    width: 75%;
+    font-size: 50px;
 }

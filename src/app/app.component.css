@@ -7,30 +7,20 @@ nav {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: rgb(221, 221, 221);
+}
+
 .navbar-brand {
     margin-left: 10px;
     font-size: 15px;   
     font-family: 'Julius Sans One', sans-serif;
 }
-
-/* .logo {
-    border: 1px solid black;
-    width: 35px;
-    height: 50px;
-    margin: 3px;
-    border-top-left-radius: 50% 60%;
-    border-top-right-radius: 50% 60%;
-    border-bottom-left-radius: 50% 40%;
-    border-bottom-right-radius: 50% 40%;
-    background: rgba(254,254,254,1);
-    background: -moz-linear-gradient(left, rgba(254,254,254,1) 0%, rgba(219,219,219,1) 77%, rgba(209,209,209,1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(254,254,254,1)), color-stop(77%, rgba(219,219,219,1)), color-stop(100%, rgba(209,209,209,1)));
-    background: -webkit-linear-gradient(left, rgba(254,254,254,1) 0%, rgba(219,219,219,1) 77%, rgba(209,209,209,1) 100%);
-    background: -o-linear-gradient(left, rgba(254,254,254,1) 0%, rgba(219,219,219,1) 77%, rgba(209,209,209,1) 100%);
-    background: -ms-linear-gradient(left, rgba(254,254,254,1) 0%, rgba(219,219,219,1) 77%, rgba(209,209,209,1) 100%);
-    background: linear-gradient(to right, rgba(254,254,254,1) 0%, rgba(219,219,219,1) 77%, rgba(209,209,209,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#d1d1d1', GradientType=1 );
-} */
 
 .nav-item {
     text-align: right;
@@ -39,9 +29,21 @@ nav {
 
 .nav-link {
     font-size: 16px;
-    color: black;
-    margin-left: 2px;
-    margin-right: 2px;
+    /* margin-left: 2px;
+    margin-right: 2px; */
+    padding: 15px;
+}
+
+.dropdown:hover > .dropdown-menu{
+    display: block;
+}
+
+.dropdown-menu {
+    margin-top: 0;
+}
+
+.dropdown-toggle::after {
+    display: none;
 }
 
 .navbar-toggler {
