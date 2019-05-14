@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 import { Project } from './project';
 
@@ -10,21 +11,20 @@ import { Project } from './project';
 })
 export class ProjectService {
   private _projectUrl = 'assets/data/projects.json';
-  projects: Project[];
+  projects: Project[] = [];
   constructor(private http: HttpClient) { }
 
-  getProjects(): Observable<any> {
-    return this.http.get<any>('assets/data/projects.json').pipe(
+  getProjects(): Observable<Project[]> {
+    return this.http.get<Project[]>(this._projectUrl).pipe(
       catchError(this.handleError));
-    this.http.get<Project[]>('assets/data/projects.json').subscribe(
-      data => {
-        return data;
-      },
-      (err: HttpErrorResponse) => {
-        console.log(err.message);
-        return null;
-      }
-    );
+  }
+
+  getProject(name: string): Observable<Project> {
+    return this.http.get<Project[]>(this._projectUrl)
+      .pipe(map(projects => projects.filter(
+        project => project.name.replace(/\s/g, '')
+          .toLowerCase() === name)[0]
+      )).pipe(catchError(this.handleError));
   }
 
   private handleError(err: HttpErrorResponse) {

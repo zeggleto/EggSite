@@ -1,0 +1,80 @@
+.container-styles {
+    background-color: rgba(0, 0, 0, 0.8);
+    min-height: 100vh;
+    padding: 0;
+    position: relative;
+}
+
+.proj-header {
+    padding-top: 55px;
+    position: relative;
+}
+
+.proj-title {
+    color: white;
+    font-size: 45px;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.proj-info {
+    position: relative;
+    padding-top: 75px;
+    height: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.proj-link {
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    border: 1px solid white;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.proj-link:hover {
+    background: rgba(255,255,255,1);
+    color: black;
+}
+
+.slide {
+    max-width: 50%;
+    height: 471px;
+    margin: auto;
+    border: 2px solid black;
+    background-color: gray;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item {
+    height: 100%;
+    max-width: 100%;
+}
+
+.carousel-inner img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: auto;
+}
+
+@media (max-width: 836px) {
+    .slide {
+        height: 320px;
+    }
+}
+
+@media (max-width: 573px) {
+    .slide {
+        height: 280px;
+    }
+}
+
+@media (max-width: 425px) {
+    .slide {
+        height: 160px;
+    }
+}

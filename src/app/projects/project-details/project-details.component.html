@@ -1,1 +1,40 @@
-<h1>asl;kdfja;sldkjfa;sldkfj</h1>
+<div class="container-fluid container-styles animate fadeIn">
+    <div class="proj-header">
+        <div class="proj-title">{{project?.name | uppercase}}</div>
+        <div class="btn-group">
+            <button class="btn btn-primary proj-link" (click)="goToProject(project?.projLink)" [hidden]="!project?.projLink"> <b>View Project</b></button>
+            <button class="btn btn-primary proj-link" (click)="goToGithub(project?.gitLink)"><b>View Github</b></button>
+        </div>
+    </div>
+
+    <div class="proj-info">
+
+        <div class="proj-desc">{{project?.longDesc}}</div>
+        <br/>
+        <div class="proj-tech"><b>Technologies: </b> <i>{{project?.technologies}}</i></div>
+        <br/>
+        <div id="slideshow" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li data-target="#slideshow" *ngFor="let i of project?.imageUrls; let k = index" [attr.data-slide-to]="k ==  0 ? 'active' : ''"></li>
+            </ul>
+
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                <div *ngFor="let i of project?.imageUrls; let k = index" [ngClass]="k == 0 ? 'carousel-item active' : 'carousel-item'">
+                    <img class="img-fluid" src="{{i}}">
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#slideshow" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#slideshow" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+
+    </div>
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router} from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Project } from '../project';
 import { ProjectService } from '../project.service';
@@ -10,10 +10,39 @@ import { ProjectService } from '../project.service';
   styleUrls: ['./project-details.component.css']
 })
 export class ProjectDetailsComponent implements OnInit {
+  project: Project;
+  name = '';
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private route: ActivatedRoute, private _router: Router, public pService: ProjectService) {
+    this.getProject();
   }
 
+  ngOnInit() {
+
+  }
+
+  getProject() {
+    this.name = this.route.snapshot.paramMap.get('name');
+    this.pService.getProject(this.name).subscribe(
+      project => {
+        if (!project) { this._router.navigate(['/error']); return; }
+        this.project = project;
+      }
+    );
+    this.route.url.subscribe(url => {
+      this.pService.getProject(url[0].path).subscribe(
+        project => {
+          this.project = project;
+        }
+      );
+    });
+  }
+
+  goToGithub(url: string) {
+    window.open(url);
+  }
+
+  goToProject(url: string) {
+    window.open(url);
+  }
 }

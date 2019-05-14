@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+.container-styles {
+    min-height: 100vh;
+    background: url("../assets/imgs/Colorado2.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 nav {
     border-bottom: 1px solid gray;
@@ -50,4 +58,10 @@ nav a:hover {
     background-color: white;
     border: 1px solid black;
     margin-right: 10px;
+}
+
+@media (max-width: 575px) {
+    .dropdown:hover > .dropdown-menu{
+        display: none;
+    }
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { ProjectService } from '../project.service';
+import { Project } from '../project';
 
 @Component({
   selector: 'app-project-list',
@@ -8,8 +10,9 @@ import { ProjectService } from '../project.service';
   styleUrls: ['./project-list.component.css']
 })
 export class ProjectListComponent implements OnInit {
-  projects: any = [];
-  constructor(private _projectService: ProjectService) { }
+  projects: Project[] = [];
+  constructor(private _projectService: ProjectService,
+              private _router: Router) { }
 
   ngOnInit() {
     this._projectService.getProjects().subscribe(
@@ -19,4 +22,8 @@ export class ProjectListComponent implements OnInit {
     );
   }
 
+  goToProject(projectName: string) {
+    projectName = projectName.replace(/\s/g, '').toLowerCase();
+    this._router.navigate(['/projects/' + projectName]);
+  }
 }

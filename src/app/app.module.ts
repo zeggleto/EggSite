@@ -7,20 +7,25 @@ import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
 import { AboutComponent } from './about/about.component';
 import { ErrorComponent } from './error/error.component';
+import { ExperienceComponent } from './experience/experience.component';
+// import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     IntroComponent,
     AboutComponent,
-    ErrorComponent
+    ErrorComponent,
+    ExperienceComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    // {provide: LocationStrategy, useClass: HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
